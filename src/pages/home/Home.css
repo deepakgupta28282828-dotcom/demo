@@ -1,0 +1,212 @@
+.hero {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  color: #ffffff;
+  padding: 170px 24px 220px;
+  /* text-align: center; */
+
+  /* Slanted bottom (left longer, right shorter) */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 90%,
+    0 100%
+  );
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #c7d2fe;
+}
+
+.hero-btn {
+  background: #ffffff;
+  color: #1e40af;
+  border: none;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Video fills hero */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Dark overlay for text contrast */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Content above video */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+/* =========================
+   SERVICES SECTION
+========================= */
+.services {
+  position: relative;
+  padding: 10px 24px 180px;
+  background: #f8fafc;
+  text-align: center;
+  overflow: hidden;
+}
+.services-top-slant {
+  position: absolute;
+  top: 0;       /* align with top */
+  left: 0;
+  width: 100%;
+  height: 160px;
+
+  /* background of previous section */
+  background: #f8fafc;
+
+  /* LEFT shorter, RIGHT taller */
+  clip-path: polygon(
+    0 40%,    /* top-left (shorter) */
+    100% 0,   /* top-right (taller) */
+    100% 100%, /* bottom-right */
+    0 100%    /* bottom-left */
+  );
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 48px;
+  color: #0f172a;
+}
+
+.service-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+  color: #1e40af;
+  font-size: 20px;
+}
+
+.service-card p {
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Bottom slant for services */
+.services-bot-slant {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: #ffffff;
+  clip-path: polygon(
+    0 60%,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+/* =========================
+   WHY ALTUS SECTION
+========================= */
+.why-altus {
+  padding: 120px 24px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.why-altus h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.why-altus p {
+  font-size: 17px;
+  color: #374151;
+  line-height: 1.7;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero {
+    padding: 140px 24px 180px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .services {
+    padding: 10px 20px 160px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-slant {
+    height: 80px;
+  }
+}
+

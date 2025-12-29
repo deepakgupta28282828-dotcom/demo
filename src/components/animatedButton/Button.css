@@ -1,0 +1,56 @@
+.btn-anmi {
+  position: relative;
+  padding: 1rem 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  min-width: 200px;
+  z-index: 1;
+  border-radius: 230px;
+}
+
+/* Magnetic Field Button */
+.magnetic-anmi {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  overflow: visible;
+}
+
+.particles-field-anmi {
+  position: absolute;
+  inset: -100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.magnetic-anmi:hover .particles-field-anmi {
+  opacity: 1;
+}
+
+.particle-anmi {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #93c5fd;
+  border-radius: 50%;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(var(--x), var(--y)) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(calc(var(--x) * -1), calc(var(--y) * -1)) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0);
+    opacity: 0;
+  }
+}
